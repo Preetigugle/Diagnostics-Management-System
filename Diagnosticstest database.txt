@@ -1,0 +1,96 @@
+mysql> show databases;
++------------------------+
+| Database               |
++------------------------+
+| acpatildb              |
+| acpcjava               |
+| acppriject             |
+| acpproject             |
+| bookstore              |
+| car_show_room          |
+| diagnostics            |
+| hms                    |
+| information_schema     |
+| mysql                  |
+| nike                   |
+| performance_schema     |
+| sakila                 |
+| sys                    |
+| travelmanagementsystem |
+| world                  |
++------------------------+
+16 rows in set (0.03 sec)
+
+mysql> use diagnostics;
+Database changed
+mysql> show tables;
++-----------------------+
+| Tables_in_diagnostics |
++-----------------------+
+| appointments          |
+| doctors               |
+| patients              |
+| tests                 |
++-----------------------+
+4 rows in set (0.03 sec)
+
+mysql> select * from patients;
++----+----------------+------------+---------------------------+--------+------------------------------------------+
+| id | name           | phone      | email                     | gender | address                                  |
++----+----------------+------------+---------------------------+--------+------------------------------------------+
+|  1 | Preeti         | 2458963257 | preetigugle@gmail.com     | F      | Meghwadi, Jogeshwari(E), Mumbai-400060   |
+|  2 | Aarya Gugle    | 4596832579 | aaryagugle@gmail.com      | F      | Andheri, Mumbai                          |
+|  3 | Ritika Sawant  | 9874562589 | ritikasawant123@gmail.com | F      | MiraRoad, Near KStar Mall, Mumbai        |
+|  4 | Vishal Jena    | 1258963574 | jenavishal@gmail.com      | M      | Delta Tower, Sector 8, Ulwe, Navi Mumbai |
+|  5 | Soham Pilankar | 5698742365 | sohamm2003@gmail.com      | M      | Sky Oasis, Jogeshwari, Munbai            |
+|  6 | Sneha Chalke   | 6575923858 | snehachalkev@gmail.com    | F      | Jan Society, Kalyan                      |
++----+----------------+------------+---------------------------+--------+------------------------------------------+
+6 rows in set (0.01 sec)
+
+mysql> select * from doctors;
++----+-----------------------+------------+----------------------------+--------+----------------------------------------------+-----------------------------------------------+
+| id | name                  | phone      | email                      | gender | address                                      | qualification                                 |
++----+-----------------------+------------+----------------------------+--------+----------------------------------------------+-----------------------------------------------+
+|  1 | Dr.Ajit Sutar         | 5896985557 | drajit@gmail.com           | M      | Suraj Tower, Delhi                           | MBBS                                          |
+|  2 | Dr. Anil Sharma       | 4526458124 | anilsharma@gmail.com       | M      | RCF Society, Chembur                         | Bachelor of Medical Laboratory Science (BMLS) |
+|  3 | Dr. Vruti Vaghela     | 2625928736 | drvaghela15@gmail.com      | F      | Hafiz Mohmmad Chawl, Sanpada, Navi Munbai    | BSc in laboratory techniques                  |
+|  4 | Dr. Rajendra Umbarkar | 6589426573 | rajendraumbarkar@gmail.com | M      | Poonam Apartment,Poonam Nagra, Mumbai-400060 | MSc in pathology                              |
+|  5 | Dr. Seema Gugle       | 2691805678 | seemagugle@gamil.com       | F      | RCF Society, Chembur, Mumbai                 | DMLT                                          |
++----+-----------------------+------------+----------------------------+--------+----------------------------------------------+-----------------------------------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from tests;
++---------+-------------------------------------------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| test_id | test_name                                 | price    | description                                                                                                                                                                                                                                                                                                                                                                                                              |
++---------+-------------------------------------------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|       1 | Full body checkup                         | 10000.00 | Blood tests, Urine tests, Imaging tests, Thyroid function tests, kidney function tests, liver function tests, lipid profile tests, vitamin tests, and diabetes tests.Full body checkups can help you detect problems early, minimize health costs, and increase your life expectancy. They can be especially beneficial for people with a family history of disease, people over 40, and people with chronic conditions. |
+|       2 | EEG Test (Electroencephalogram)           |  4500.00 | (EEG) is a painless test that measures the electrical activity of your brain. It's also known as a brain wave test.                                                                                                                                                                                                                                                                                                      |
+|       3 | HSG (Hysterosalpingography)               |  5000.00 | HSG is an X-ray procedure that uses a contrast dye to produce images of the uterus and fallopian tubes. It's primarily used to assess female infertility by checking for blockages in the fallopian tubes or other issues that may prevent pregnancy                                                                                                                                                                     |
+|       4 | TSH Test (Thyroid Stimulating Hormone)    |  1500.00 | TSH test measures the level of TSH in your blood to help diagnose thyroid conditions                                                                                                                                                                                                                                                                                                                                     |
+|       5 | C-Reactive Protein (CRP) Test             |   600.00 | CRP test measures the level of CRP in your blood to help determine if there is inflammation in your body                                                                                                                                                                                                                                                                                                                 |
+|       6 | Serum Electrolytes Test                   |   350.00 | An electrolyte panel, also known as a serum electrolyte test, is a blood test that measures levels of the body's main electrolytes: Sodium, which helps control the amount of fluid in your body                                                                                                                                                                                                                         |
+|       7 | Potassium (K+) Test                       |   300.00 | A potassium test measures the amount of potassium in your blood or urine to help diagnose or monitor conditions that affect potassium levels                                                                                                                                                                                                                                                                             |
+|       8 | CBC Test                                  |   349.00 | A complete blood count (CBC) is a blood test that measures the number and features of different blood components, including red blood cells, white blood cells, and platelets                                                                                                                                                                                                                                            |
+|       9 | Chikungunya Test                          |   500.00 | A chikungunya test is a blood test that detects antibodies to the chikungunya virus and can help diagnose a chikungunya infection                                                                                                                                                                                                                                                                                        |
+|      10 | Urine Routine Test                        |   400.00 | a basic test that examines urine for a range of physical, chemical, and microscopic characteristics                                                                                                                                                                                                                                                                                                                      |
+|      11 | Erythrocyte Sedimentation Rate (ESR) Test |   199.00 | An Erythrocyte Sedimentation Rate (ESR) test measures how quickly red blood cells settle at the bottom of a test tube in one hour. It's also known as a "sed rate".                                                                                                                                                                                                                                                      |
+|      12 | Thyroid Profile Test (T3, T4, UTSH) / TFT |   520.00 | A thyroid profile test (TFT) is a blood test that measures the levels of thyroid hormones in the blood to assess the functioning of the thyroid gland                                                                                                                                                                                                                                                                    |
+|      13 | Malarial Parasite Test                    |   310.00 | There are multiple tests for malaria parasites, including blood smears, rapid diagnostic tests (RDTs), and polymerase chain reaction (PCR) tests                                                                                                                                                                                                                                                                         |
+|      14 | Glycosylated Hemoglobin (HbA1c) Test      |   500.00 | The glycated hemoglobin (HbA1c) test, also known as the hemoglobin A1c test, is a blood test that measures the average blood sugar level over the previous two to three months                                                                                                                                                                                                                                           |
+|      15 | Uric Acid Test                            |   209.00 | A uric acid test measures the amount of uric acid in your blood or urine. Uric acid is a waste product created when your body breaks down purines, which are chemicals found in your cells and in some foods and drinks                                                                                                                                                                                                  |
+|      16 | Cardiac Risk Markers                      |   449.00 | Cardiac risk markers are a group of blood tests that help doctors assess the risk of heart disease and stroke in a patient. These tests measure chemicals released into the blood when the heart is damaged or stressed.                                                                                                                                                                                                 |
+|      17 | Free Thyroid Profile Test                 |   530.00 | A free thyroid profile test is a blood test that measures the levels of thyroid hormones in the blood to evaluate the thyroid gland's function: T3 (FT3), T4 (FT4), Thyroid-stimulating hormone (TSH)                                                                                                                                                                                                                    |
+|      18 | Peripheral Smear (PS) Test                |   649.00 | A peripheral blood smear (PBS) test, also known as a peripheral blood film, is a laboratory procedure that examines a blood sample under a microscope to assess the appearance and count of blood cells and platelets                                                                                                                                                                                                    |
+|      19 | Lipid Profile Test                        |   410.00 | A lipid profile test, also known as a cholesterol test, measures the levels of different types of fat in your blood, including cholesterol and triglycerides. This test can help predict your risk of heart disease and stroke                                                                                                                                                                                           |
+|      20 | CT Scan                                   |  1500.00 | A computed tomography (CT) scan is a diagnostic imaging procedure that uses X-rays and a computer to create detailed pictures of the inside of the body                                                                                                                                                                                                                                                                  |
+|      21 | Pathology test.                           |  1358.00 | A pathology test is a lab test that examines a sample of your body tissue or fluid to help diagnose or monitor a disease or condition. Pathology tests can be performed on a variety of samples, including: Bllod, Urine, Stool, Sputum, Swabs from the nose, throat, skin, cervix, or genitals, Tissue samples obtained by biopsy or needle                                                                             |
++---------+-------------------------------------------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+21 rows in set (0.00 sec)
+
+mysql> select * from appointments;
++----------------+------------+-----------+---------+------------------+------------------+-----------+
+| appointment_id | patient_id | doctor_id | test_id | appointment_date | appointment_time | status    |
++----------------+------------+-----------+---------+------------------+------------------+-----------+
+|              1 |          1 |         3 |       1 | 2024-10-22       | 01:00:00         | Scheduled |
++----------------+------------+-----------+---------+------------------+------------------+-----------+
+1 row in set (0.01 sec)
